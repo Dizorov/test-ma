@@ -16,7 +16,7 @@ function CarsItem(props) {
   const handleDeleteCar = () => {
     props.onDelete();
   } 
-
+  console.log(typeof price)
   return (
     <li className={s.CarsItem}>
       <div className={s.Header}>
@@ -31,7 +31,9 @@ function CarsItem(props) {
       <div className={s.Footer}>
         <span className={s.OrderId}>Заказ №{orderId}</span>
         <div className={s.Price}>
-          <span>{price} &#8381;</span>
+          <span>
+            {typeof price === 'number' ? price.toLocaleString('ru') : price} &#8381;
+          </span>
           <button className={s.DeleteBtn} type="button" onClick={handleDeleteCar}>
             <Cross />
           </button>

@@ -1,7 +1,8 @@
 .CarsList {
   display: grid;
-  grid-gap: 16px;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 350px));
+  justify-content: center;
   padding-left: 0;
   list-style: none;
 }
