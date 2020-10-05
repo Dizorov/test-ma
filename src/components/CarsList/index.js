@@ -16,15 +16,16 @@ function CarsList() {
     setCars(carsList);
   };
 
-  const deleteCar = (car) => {
-    const updateCars = cars.filter((item) => item.orderId !== car.orderId);
+  const deleteCar = (index) => {
+    console.log(index);
+    const updateCars = cars.filter((item) => cars.indexOf(item) !== index);
     setCars(updateCars);
   };
 
   return (
     <ul className={s.CarsList}>
       {cars.map((car, index) => {
-        return <CarsItem car={car} onDelete={() => {deleteCar(car)}} key={index} />
+        return <CarsItem car={car} onDelete={() => {deleteCar(index)}} key={index} id={car.index} />
       })}
     </ul>
   )
