@@ -16,7 +16,7 @@ function CarsItem(props) {
   const handleDeleteCar = () => {
     props.onDelete();
   } 
-  console.log(typeof price)
+  
   return (
     <li className={s.CarsItem}>
       <div className={s.Header}>

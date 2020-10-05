@@ -17,7 +17,6 @@ function CarsList() {
   };
 
   const deleteCar = (index) => {
-    console.log(index);
     const updateCars = cars.filter((item) => cars.indexOf(item) !== index);
     setCars(updateCars);
   };
